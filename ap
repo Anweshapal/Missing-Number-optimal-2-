@@ -1,0 +1,14 @@
+public class Solution {
+    public static int missingNumber(int []a, int N) {
+      int xor1=0;
+      
+      for(int i=0;i<N;i++){
+          xor1=xor1^a[i];
+      }
+      int xor2=0;
+      for(int i=1;i<=N;i++){
+          xor2=xor2^i;
+      }
+       return (xor1^xor2);
+          }
+}
